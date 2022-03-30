@@ -72,6 +72,12 @@
 
 #map {
   height: 100%;
+  max-width: 85%;
+  max-height: 98%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+  border-radius: 5%;
 }
 
 body {
