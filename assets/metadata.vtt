@@ -1,0 +1,99 @@
+WEBVTT
+
+lima
+00:00:00.000 --> 00:00:08.000
+{
+"titulo": "Lima - Peru",
+"descripcion": "",
+"src": "",
+"lat": "-12.0431800", 
+"lng": "-77.0282400"
+}
+
+roatan
+00:00:08.000 --> 00:00:19.000
+{
+"titulo": "Roatán - Honduras",
+"descripcion": "",
+"src": "",
+"lat": "16.32427380018947", 
+"lng": "-86.53628945117437"
+}
+
+viña-del-mar
+00:00:19.000 --> 00:00:30.000
+{
+"titulo": "Viña del mar - Chile",
+"descripcion": "",
+"src": "",
+"lat": "-33.02374662931928", 
+"lng": "-71.56659157607162"
+}
+
+tegucigalpa
+00:00:30.000 --> 00:00:43.000
+{
+"titulo": "Tegucigalpa - Honduras",
+"descripcion": "",
+"src": "",
+"lat": "14.065892376311353", 
+"lng": "-87.19743069131832"
+}
+
+roatan
+00:00:43.000 --> 00:00:54.000
+{
+"titulo": "Roatán - Honduras",
+"descripcion": "",
+"src": "",
+"lat": "16.32427380018947", 
+"lng": "-86.53628945117437"
+}
+
+casablanca
+00:01:05.000 --> 00:01:19.000
+{
+"titulo": "Casablanca  - Chile",
+"descripcion": "",
+"src": "",
+"lat": "-33.30876529644405", 
+"lng": "-71.4082672458513", 
+}
+
+ica
+00:01:19.000 --> 00:01:41.000
+{
+"titulo": "Ica  - Peru",
+"descripcion": "",
+"src": "",
+"lat": "-14.07561758290546", 
+"lng": "-75.73439427259017"
+}
+
+santa-ana
+00:01:41.000 --> 00:01:58.000
+{
+"titulo": "Santa Ana  - Honduras",
+"descripcion": "",
+"src": "",
+"lat": "13.933295101682802", 
+"lng": "-87.27338454840108"
+}
+
+sorrento
+00:01:58.000 --> 00:02:08.000
+{
+"titulo": "Sorrento - Italia",
+"descripcion": "",
+"src": "",
+"lat": "40.626208503035116", 
+"lng": "14.376422227682426"
+} 
+
+
+
+
+
+
+
+

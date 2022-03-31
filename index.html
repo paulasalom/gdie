@@ -52,6 +52,9 @@
         <div class="video-player">
           <video class="video">
             <source src="assets/video.mp4" type="video/mp4" />
+            
+            <track default kind="metadata" src="assets/metadata.vtt"/>
+            
           </video>
 
           <div class="player-controls">
@@ -66,7 +69,7 @@
             <button class="change-velocity" title="Vel">x2</button>
 
             <input type="range" class="volume" min="0" max="1" step="0.01" value="1" />
-
+            
             <div class="time">
               <span class="current">0:00</span> / <span class="duration">0:00</span>
             </div>
