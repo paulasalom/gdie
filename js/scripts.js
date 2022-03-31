@@ -70,13 +70,36 @@ function initMap() {
 const videoPlayer = document.querySelector('.video-player')
 const video = videoPlayer.querySelector('.video')
 const playButton = videoPlayer.querySelector('.play-button')
+const addTimeButton = videoPlayer.querySelector('.add-time-button')
+const restTimeButton = videoPlayer.querySelector('.rest-time-button')
+const changeVelocity = videoPlayer.querySelector('.change-velocity')
 const volume = videoPlayer.querySelector('.volume')
 const currentTimeElement = videoPlayer.querySelector('.current')
 const durationTimeElement = videoPlayer.querySelector('.duration')
 const progress = videoPlayer.querySelector('.video-progress')
 const progressBar = videoPlayer.querySelector('.video-progress-filled')
 
+//Change Velocity
+changeVelocity.addEventListener('click', (e)=>{
+    debugger;
+    if(changeVelocity.textContent == 'x2'){
+        changeVelocity.textContent = 'x1'
+        video.playbackRate = 2.0
+    }else{
+        changeVelocity.textContent = 'x2'
+        video.playbackRate = 1.0
+    }
+})
+//Add 5 seconds
+addTimeButton.addEventListener('click', (e) =>{
+    debugger;
+    video.currentTime =video.currentTime + 5;
+})
 
+//Rest 5 seconds
+restTimeButton.addEventListener('click', (e) =>{
+    video.currentTime = video.currentTime - 5
+})
 //Play and Pause button
 playButton.addEventListener('click', (e) => {
   if(video.paused){
