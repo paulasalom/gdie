@@ -40,14 +40,24 @@ tegucigalpa
 "lng": "-87.19743069131832"
 }
 
-roatan
+roatan2
 00:00:43.000 --> 00:00:54.000
 {
-"titulo": "Roatán - Honduras",
+"titulo": "Roatán - Honduras (2)",
 "descripcion": "",
 "src": "",
 "lat": "16.32427380018947", 
 "lng": "-86.53628945117437"
+}
+
+napoles
+00:00:54.000 --> 00:01:05.000
+{
+"titulo": "Napoles - Italia",
+"descripcion": "",
+"src": "",
+"lat": "40.845861629355056",
+"lng": "14.25415285465387"
 }
 
 casablanca
@@ -88,12 +98,4 @@ sorrento
 "src": "",
 "lat": "40.626208503035116", 
 "lng": "14.376422227682426"
-} 
-
-
-
-
-
-
-
-
+}

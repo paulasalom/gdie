@@ -56,14 +56,99 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+
 let map;
+var markers = [];
+let marker;
+
+var videoElement = document.querySelector("video");
+var textTracks = videoElement.textTracks;
+var textTrack = textTracks[0];
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
+        center: { lat: 25.195336496218886, lng: -4.039732206325712},
+        zoom: 2,
+    });  
+}
+
+
+textTrack.oncuechange = function () {
+    var cue = this.activeCues[0];
+    var obj = JSON.parse(cue.text);
+    marker = new google.maps.Marker({
+        position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
+        map,
+        title: obj.titulo,
+        
+        
+    });
+    markers.push(marker)
+    marker.addListener("click", function() {
+        // console.log(marker.getTitle())
+        console.log(marker.getCursor())
+        var title = marker.getTitle();
+        // console.log(title)
+    });
+
+}
+
+if (marker){
+    marker.addListener("click", function() {
+        // console.log(marker.getTitle())
+        console.log(markers[0].getTitle())
+        var title = marker.getTitle();
+        // console.log(title)
+
+
     });
 }
+// marker.addListener("click", function() {
+//     // console.log(marker.getTitle())
+//     console.log(markers[0].getTitle())
+//     var title = marker.getTitle();
+//     // console.log(title)
+// });
+
+
+// const marker2 = markers.find(element => element.getTitle() = "Viña del mar - Chile")
+// marker2.addListener("click", function() {
+//     var title = marker2.getTitle();
+//     console.log(title)
+// })
+// marker.addListener("click", function() {
+//     var title = marker.getTitle();
+//     console.log(title)
+//     if( title == "Lima - Peru"){
+//         videoElement.currentTime = textTrack.cues[0].startTime;
+//     }
+//     if(title == "Roatán - Honduras"){
+//         videoElement.currentTime = textTrack.cues[1].startTime;
+//     }
+//     if(title == "Viña del mar - Chile"){
+//         videoElement.currentTime = textTrack.cues[2].startTime;
+//     }
+//     if(title == "Tegucigalpa - Honduras"){
+//         videoElement.currentTime = textTrack.cues[3].startTime;
+//     }
+//     if(title == "Roatán - Honduras (2)"){
+//         videoElement.currentTime = textTrack.cues[4].startTime;
+//     }
+//     if(title == "Casablanca  - Chile"){
+//         videoElement.currentTime = textTrack.cues[5].startTime;
+//     }
+//     if(title == "Ica  - Peru"){
+//         videoElement.currentTime = textTrack.cues[6].startTime;
+//     }
+//     if(title == "Santa Ana  - Honduras"){
+//         videoElement.currentTime = textTrack.cues[7].startTime;
+//     }
+//     if(title == "Sorrento - Italia"){
+//         videoElement.currentTime = textTrack.cues[8].startTime;
+//     }
+    
+// }); 
+
 
 //--- Funciones control video ---
 const videoPlayer = document.querySelector('.video-player')
@@ -80,7 +165,6 @@ const progressBar = videoPlayer.querySelector('.video-progress-filled')
 
 //Change Velocity
 changeVelocity.addEventListener('click', (e)=>{
-    debugger;
     if(changeVelocity.textContent == 'x2'){
         changeVelocity.textContent = 'x1'
         video.playbackRate = 2.0
@@ -91,7 +175,6 @@ changeVelocity.addEventListener('click', (e)=>{
 })
 //Add 5 seconds
 addTimeButton.addEventListener('click', (e) =>{
-    debugger;
     video.currentTime =video.currentTime + 5;
 })
 
@@ -141,3 +224,5 @@ progress.addEventListener('click', (e) =>{
   video.currentTime = progressTime
 })
 
+
+  
