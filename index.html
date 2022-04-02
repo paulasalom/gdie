@@ -20,6 +20,11 @@
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
 </head>
 
 <body id="page-top">
@@ -52,9 +57,9 @@
         <div class="video-player">
           <video class="video">
             <source src="assets/video.mp4" type="video/mp4" />
-            
-            <track default kind="metadata" src="assets/metadata.vtt"/>
-            
+
+            <track default kind="metadata" src="assets/metadata.vtt" />
+
           </video>
 
           <div class="player-controls">
@@ -69,7 +74,7 @@
             <button class="change-velocity" title="Vel">x2</button>
 
             <input type="range" class="volume" min="0" max="1" step="0.01" value="1" />
-            
+
             <div class="time">
               <span class="current">0:00</span> / <span class="duration">0:00</span>
             </div>
@@ -105,15 +110,73 @@
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-lg-8">
           <h2 class="text-white mb-4">Editor semántico</h2>
-          <p class="text-white-50">
-            Se implementarán dos botones, uno para añadir nueva metadata al
-            video y el otro para eliminar metadata. Cuando se pulse el botón
-            de añadir metadata aparecerá un pequeño formulario donde se nos
-            preguntará el identificador del texttrack, la información a
-            añadir, el tiempo de inicio y el tiempo de finalización. Cuando
-            pulsemos el botón para eliminar metadata tendremos que introducir
-            el identificador del texttrack a eliminar.
-          </p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+            Add
+          </button>
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#removeModal">
+            Remove
+          </button>
+
+          <!-- Add Modal -->
+          <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addModalLabel">Añadir Cue</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="nameCue">Nombre del cue</label>
+                      <input type="email" class="form-control" id="nameCue" aria-describedby="emailHelp"
+                        placeholder="Debe ser único">
+                      <small id="emailHelp" class="form-text text-muted">Recuerda bien el nombre</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="startTime">Tiempo de inicio</label>
+                      <input type="password" class="form-control" id="startTime" placeholder="00.00s">
+                    </div>
+                    <div class="form-group">
+                      <label for="endTime">Tiempo de fin</label>
+                      <input type="password" class="form-control" id="endTime" placeholder="00.00s">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Remove Modal -->
+          <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="removeModalLabel">Eliminar Cue</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="removeCueId">Nombre del Cue</label>
+                      <input type="email" class="form-control" id="removeCueId" aria-describedby="emailHelp"
+                        placeholder="Escribe el nombre del Cue">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -139,6 +202,10 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4g6WK8SgiPykd_IwDhFQO87XgAq8mBtE&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD"
     async defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </body>
 
