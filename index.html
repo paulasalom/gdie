@@ -24,7 +24,6 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-
 </head>
 
 <body id="page-top">
@@ -110,6 +109,13 @@
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-lg-8">
           <h2 class="text-white mb-4">Editor semántico</h2>
+          <p class="text-white-50">
+            El editor semántico proporciona la funcionalidad de añadir (Add) y eliminar (Remove) metadata dentro del
+            vídeo.
+            Esto permite al usuario crear un punto registrado en el vídeo, acotado entre dos tiempos, en el que se
+            pintará de manera
+            dinámica la información que el usuario haya proporcionado.
+          </p>
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
             Add
@@ -131,23 +137,66 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form id="addCueForm">
                     <div class="form-group">
-                      <label for="nameCue">Nombre del cue</label>
-                      <input type="email" class="form-control" id="nameCue" aria-describedby="emailHelp"
+                      <label for="nameCue">Título del cue</label>
+                      <input type="text" class="form-control" id="nameCue" aria-describedby="emailHelp"
                         placeholder="Debe ser único">
                       <small id="emailHelp" class="form-text text-muted">Recuerda bien el nombre</small>
                     </div>
                     <div class="form-group">
                       <label for="startTime">Tiempo de inicio</label>
-                      <input type="password" class="form-control" id="startTime" placeholder="00.00s">
+                      <input type="text" class="form-control" id="startTime" placeholder="00.00s">
                     </div>
                     <div class="form-group">
                       <label for="endTime">Tiempo de fin</label>
-                      <input type="password" class="form-control" id="endTime" placeholder="00.00s">
+                      <input type="text" class="form-control" id="endTime" placeholder="00.00s">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group">
+                      <label for="description">Descripcion</label>
+                      <input type="text" class="form-control" id="description" placeholder="Escribe lo que quieras">
+                    </div>
+                    <div class="form-group">
+                      <label for="latCue">Latitud</label>
+                      <input type="text" class="form-control" id="latCue" placeholder="+-00.0000">
+                    </div>
+                    <div class="form-group">
+                      <label for="lngCue">Longitud</label>
+                      <input type="text" class="form-control" id="lngCue" placeholder="+-00.0000">
+                    </div>
+                    <div class="form-group">
+                      <label for="src">Imagen</label>
+                      <input type="text" class="form-control" id="src" placeholder="Ruta de la imagen">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                   </form>
+                  <script>
+                    $("#addCueForm").submit(function (event) {
+                      debugger
+                      var videoElement = document.querySelector("video");
+                      var textTracks = videoElement.textTracks;
+                      var userTextTrack = textTracks[1];
+
+                      var startTime = parseFloat(this.elements['startTime'].value);
+                      var endTime = parseFloat(this.elements['endTime'].value);
+                      var title = this.elements['nameCue'].value;
+                      var description = this.elements['description'].value;
+                      var src = this.elements['src'].value;
+                      var lat = this.elements['latCue'].value;
+                      var lng = this.elements['lngCue'].value;
+
+                      var body = {
+                        "titulo" : title,
+                        "description" : description,
+                        "src" : src,
+                        "lat" : lat,
+                        "lng" : lng
+                      }
+
+                      var newCue = new VTTCue(startTime, endTime, JSON.stringify(body) );
+                      userTextTrack.addCue(newCue);
+                    });
+                  </script>
                 </div>
               </div>
             </div>
@@ -165,14 +214,18 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form id="removeCueForm">
                     <div class="form-group">
                       <label for="removeCueId">Nombre del Cue</label>
-                      <input type="email" class="form-control" id="removeCueId" aria-describedby="emailHelp"
-                        placeholder="Escribe el nombre del Cue">
+                      <input type="text" class="form-control" id="removeCueId" placeholder="Escribe el nombre del Cue">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                   </form>
+                  <script>
+                    $("#removeCueForm").submit(function (event) {
+                      console.log('Eliminando Cue...')
+                    });
+                  </script>
                 </div>
               </div>
             </div>

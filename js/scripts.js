@@ -50,10 +50,6 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
-
-
-
 });
 
 
@@ -63,6 +59,7 @@ let marker;
 
 var videoElement = document.querySelector("video");
 var textTracks = videoElement.textTracks;
+videoElement.addTextTrack("metadata","User", "es");
 var textTrack = textTracks[0];
 
 function initMap() {
