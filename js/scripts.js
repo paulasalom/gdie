@@ -58,6 +58,7 @@ var markers = [];
 let marker;
 
 let lang = 'es'
+let obj;
 
 
 var videoElement = document.querySelector("video");
@@ -75,7 +76,7 @@ function initMap() {
 
 textTrack.oncuechange = function () {
     var cue = this.activeCues[0];
-    var obj = JSON.parse(cue.text);
+    obj = JSON.parse(cue.text);
     console.log(obj)
     console.log(obj.descripcion[lang]);
     //document.getElementById('description').innerHTML = '';
@@ -92,9 +93,7 @@ textTrack.oncuechange = function () {
 const langSelector = document.getElementById('language-picker-select')
 langSelector.addEventListener('change', (e) =>{
     lang = langSelector.value;
-    var cue = this.activeCues[0];
-    var obj = JSON.parse(cue.text);
-    console.log(obj)
+    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
 })
 
 
