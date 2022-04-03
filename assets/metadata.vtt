@@ -9,7 +9,7 @@ lima
     "en" : "Lima is the capital of Peru located on the arid Pacific coast of the country. Although its colonial center is preserved, it is an overflowing metropolis and one of the largest cities in South America. The Larco Museum houses a collection of pre-Columbian art and the Museo de la Nación traces the history of Peru’s ancient civilizations. The Plaza de Armas and the 16th century cathedral are the nucleus of the old center of Lima.",
     "cat": "Lima és la capital del Perú ubicada a l'àrida costa del Pacífic del país. Malgrat que el seu centre colonial es conserva, és una desbordant metròpoli i una de les ciutats més grans de Sud-amèrica. El Museu Larco alberga una col·lecció d'art precolombí i el Museu de la Nació recorre la història de les civilitzacions antigues del Perú. La Plaça d'Armes i la catedral del segle XVI són el nucli de l'antic centre de Lima."
 },
-"src": "",
+"img": ["https://revistaelconocedor.com/wp-content/uploads/2018/05/lima4-1024x552.jpg","https://www.peru.travel/Contenido/Destino/Imagen/es/8/1.4/Principal/lima-banner-3.jpg","https://previews.123rf.com/images/dvrcan/dvrcan1706/dvrcan170600079/79593414-cerro-san-crist%C3%B3bal-en-lima-per%C3%BA.jpg"],
 "lat": "-12.0431800", 
 "lng": "-77.0282400"
 }
@@ -23,7 +23,7 @@ roatan
     "en" : "Roatán is a Honduran island located in the Bay Islands of the Caribbean. It is part of the vast Mesoamerican Reef System and is known for its beaches, dive sites and marine life, including whale sharks. To the southwest is the crowded beach of Bahía Oeste, which has a coral reef near the shore. Cruise ships dock in the capital (Roatán) and the nearby Mahogany Bay. To the east there are small settlements like the Garífuna culture in the town of Punta Gorda.",
     "cat": "Roatán és una illa hondurenya situada a les Illes de la Badia, al Carib. Forma part de l'enorme Sistema Arran de Mesoamericà i és coneguda per les seves platges, els seus llocs de busseig i la seva vida marina, que inclou tiburons ballena. Al sud-oest hi ha la concorreguda platja de Badia Oest, que té un escull de corall a prop de la riba. Els creuers atracen a la capital (Roatán) i a la propera badia Mahogany. A l'est hi ha petits assentaments com el de la cultura garífuna al poble de Punta Gorda."
 },
-"src": "",
+"img": ["","",""],
 "lat": "16.32427380018947", 
 "lng": "-86.53628945117437"
 }
@@ -37,7 +37,7 @@ viña-del-mar
     "en" : "Viña del Mar is a coastal tourist town located northwest of Santiago de Chile. It is known for its gardens, beaches and tall buildings. Quinta Vergara Park is home to the Quinta Vergara amphitheatre, the Vergara Palace, from the early 20th century, and the Artequin Museum, which displays copies of prestigious works of art. The Francisco Fonck Museum of Archaeology and History exhibits Moai sculptures from Easter Island and reduced heads.",
     "cat": "Viña del Mar és una ciutat turística costanera que es troba al nord-oest de Santiago de Xile. És coneguda pels seus jardins, platges i edificis de gran alçada. Al parc Quinta Vergara hi ha l'amfiteatre de la Quinta Vergara, el palau Vergara, de principis del segle XX, i el Museu Artequin, que exhibeix còpies d'obres d'art prestigioses. El Museu d'Arqueologia i Història Francisco Fonck exhibeix escultures moàis de l'illa de Pasqua i caps reduïts."
 },
-"src": "",
+"img": ["","",""],
 "lat": "-33.02374662931928", 
 "lng": "-71.56659157607162"
 }
@@ -51,7 +51,7 @@ tegucigalpa
     "en" : "Tegucigalpa is the capital of Honduras and is located in a valley surrounded by mountains. It is known for its Spanish colonial architecture, whose state of conservation is very good. The Cathedral of San Miguel Arcángel, with its Baroque interior, is the most important building of the Central Square or Morazán. The Museum for National Identity takes a tour of the country’s history and includes a virtual tour of the Mayan ruins of Copán, in western Honduras.",
     "cat": "Tegucigalpa és la capital d'Hondures i està situada en una vall envoltada de muntanyes. Se la coneix per la seva arquitectura colonial espanyola, l' estat de conservació de la qual és molt bo. La catedral de Sant Miquel Arcàngel, amb el seu interior barroc, és l'edifici més important de la plaça Central o Morazán. El Museu per a la Identitat Nacional fa un recorregut per la història del país i inclou una visita virtual per les ruïnes maies de Copán, a l'oest d'Hondures."
 },
-"src": "",
+"img": ["","",""],
 "lat": "14.065892376311353", 
 "lng": "-87.19743069131832"
 }
@@ -65,7 +65,7 @@ roatan2
     "en" : "Roatán is a Honduran island located in the Bay Islands of the Caribbean. It is part of the vast Mesoamerican Reef System and is known for its beaches, dive sites and marine life, including whale sharks. To the southwest is the crowded beach of Bahía Oeste, which has a coral reef near the shore. Cruise ships dock in the capital (Roatán) and the nearby Mahogany Bay. To the east there are small settlements like the Garífuna culture in the town of Punta Gorda.",
     "cat": "Roatán és una illa hondurenya situada a les Illes de la Badia, al Carib. Forma part de l'enorme Sistema Arran de Mesoamericà i és coneguda per les seves platges, els seus llocs de busseig i la seva vida marina, que inclou tiburons ballena. Al sud-oest hi ha la concorreguda platja de Badia Oest, que té un escull de corall a prop de la riba. Els creuers atracen a la capital (Roatán) i a la propera badia Mahogany. A l'est hi ha petits assentaments com el de la cultura garífuna al poble de Punta Gorda."
 },
-"src": "",
+"img": ["","",""],
 "lat": "16.32427380018947", 
 "lng": "-86.53628945117437"
 }
@@ -79,7 +79,7 @@ napoles
     "en" : "Naples is a city in southern Italy located on the Gulf of Naples. Nearby is Mount Vesuvius, the still active volcano that destroyed the nearby Roman city of Pompeii. Naples dates back to the second millennium BC. C. and has centuries of important art and architecture. The city’s cathedral, Duomo di San Gennaro, is full of frescoes. Other important landmarks include the splendid Royal Palace and the 13th century Castel Nuovo Castle.",
     "cat": "Nàpols és una ciutat del sud d'Itàlia que s'ubica al golf de Nàpols. A prop es troba el puig Vesubio, el volcà encara actiu que va destruir la propera ciutat romana de Pompeya. Nàpols data del segon mil·lenni a. C. i té segles d' art i arquitectura importants. La catedral de la ciutat, Duomo di San Gennaro, està plena de frescos. Altres fites importants inclouen l'esplèndid Palau Reial i el castell Castel Nuovo del segle XIII."
 },
-"src": "",
+"img": ["","",""],
 "lat": "40.845861629355056",
 "lng": "14.25415285465387"
 }
@@ -93,7 +93,7 @@ casablanca
     "en" : "Casablanca is a town and municipality in the Valparaíso Province of Chile.",
     "cat": "Casablanca és una comuna del litoral central de Xile pertanyent a la província i regió de Valparaíso, Xile."
 },
-"src": "",
+"img": ["","",""],
 "lat": "-33.30876529644405", 
 "lng": "-71.4082672458513", 
 }
@@ -107,7 +107,7 @@ ica
     "en" : "Ica is a city in southern Peru, capital of the department of Ica, located in the narrow valley that forms the River Ica, between the Gran Tablazo de Ica and the western slopes of the Andes mountain range. The city of Ica includes five urban districts.",
     "cat": "Ica és una ciutat del centre sud del Perú, capital del departament d'Ica, situada a l'estret vall que forma el riu Ica, entre el Gran Tablazo de Ica i els vessants occidentals de la serralada dels Andes. La ciutat d'Ica inclou cinc districtes urbans."
 },
-"src": "",
+"img": ["","",""],
 "lat": "-14.07561758290546", 
 "lng": "-75.73439427259017"
 }
@@ -121,7 +121,7 @@ santa-ana
     "en" : "Santa Ana is a municipality in the Francisco Morazán Department of Honduras.",
     "cat": "Santa Ana és un municipi del departament de Francisco Morazán a la República d'Hondures."
 },
-"src": "",
+"img": ["","",""],
 "lat": "13.933295101682802", 
 "lng": "-87.27338454840108"
 }
@@ -135,7 +135,7 @@ sorrento
     "en" : "Sorrento is a coastal city in southwestern Italy, facing the Gulf of Naples on the Sorrentine Peninsula. Situated on cliffs that separate the city from its busy marinas, it is famous for its panoramic views of the sea and Piazza Tasso, a square surrounded by cafés. The historical centre is a labyrinth of narrow passageways where you will find the Chiesa di San Francesco, a 14th century church with a serene cloister.",
     "cat": "Sorrento és una ciutat costanera al sud-oest d'Itàlia, enfront del golf de Nàpols a la península Sorrentina. Situada sobre penya-segats que separen la ciutat dels seus ocupats ports esportius, és famosa per les vistes panoràmiques del mar i la Piazza Tasso, una plaça envoltada de cafès. El centre històric és un laberint de passatges on es troba la Chiesa di San Francesco, una església del segle XIV amb un sereno claustre."
 },
-"src": "",
+"img": ["","",""],
 "lat": "40.626208503035116", 
 "lng": "14.376422227682426"
 }
