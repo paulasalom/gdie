@@ -11610,7 +11610,7 @@ body {
 }
 
 .description-section {
-  padding-top: 10rem;
+  padding-top: 2%;
   background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 .description-section p {
