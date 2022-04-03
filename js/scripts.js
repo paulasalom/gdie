@@ -58,7 +58,6 @@ var markers = [];
 let marker;
 
 let lang = "es";
-let descripionHTML;
 
 
 var videoElement = document.querySelector("video");
@@ -79,9 +78,7 @@ textTrack.oncuechange = function () {
     var obj = JSON.parse(cue.text);
     console.log(obj)
     console.log(obj.descripcion[lang])
-    descripionHTML += '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
-    ('#description').append(descripionHTML);
-    ('#description').append('<label>Enter your name:</label>');
+    document.getElementById('description').innerHTML += '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
