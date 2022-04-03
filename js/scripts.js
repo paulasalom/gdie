@@ -69,7 +69,6 @@ var textTrack = textTracks[0];
 var textTrackUser = textTracks[1];
 
 
-
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 25.195336496218886, lng: -4.039732206325712},
