@@ -80,8 +80,8 @@ textTrack.oncuechange = function () {
     console.log(obj)
     console.log(obj.descripcion[lang])
     descripionHTML += '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
-
-    ('#description').append(descripionHTML)
+    ('#description').append(descripionHTML);
+    ('#description').append('<label>Enter your name:</label>');
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
