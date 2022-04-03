@@ -13,7 +13,7 @@ lima
 "lat": "-12.0431800", 
 "lng": "-77.0282400",
 "clock" : "<div style= 'text-align:center;padding:1em 0; '> <h4><a style= 'text-decoration:none; ' href= 'https://www.zeitverschiebung.net/es/city/3936456 '><span style= 'color:gray; '> </span><br />Lima, Perú</a></h4> <iframe src= 'https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FLima ' width= '100% ' height= '90 ' frameborder= '0 ' seamless></iframe> </div>",
-"weather" : "<a class='weatherwidget-io' href='https://forecast7.com/en/n12d05n77d04/lima/' data-label_1='LIMA' data-label_2='WEATHER' data-theme='dark' >LIMA WEATHER</a><script>!(function (d, s, id) {var js,fjs = d.getElementsByTagName(s)[0];if (!d.getElementById(id)) {js = d.createElement(s);js.id = id;js.src =  'https://weatherwidget.io/js/widget.min.js ';fjs.parentNode.insertBefore(js, fjs);}})(document,  'script ',  'weatherwidget-io-js ');</script>"
+"weather" : "<div id='ww_433d76ecec55c' v='1.20' loc='id' a='{'t':'horizontal','lang':'en','ids':['wl6697'],'cl_bkg':'#000000','cl_font':'#FFFFFF','cl_cloud':'#FFFFFF','cl_persp':'#81D4FA','cl_sun':'#FFC107','cl_moon':'#FFC107','cl_thund':'#FF5722','sl_sot':'fahrenheit','sl_ics':'one_a','font':'Arial'}'>Weather for the Following Location: <a href='https://2ua.org/per/lima_region/map/' id='ww_433d76ecec55c_u' target='_blank'>Lima region, Peru</a></div><script async src='https://srv2.weatherwidget.org/js/?id=ww_433d76ecec55c'></script>"
 }
 
 roatan
