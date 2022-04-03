@@ -91,7 +91,7 @@ textTrack.oncuechange = function () {
 
 const langSelector = document.getElementById('language-picker-select')
 langSelector.addEventListener('change', (e) =>{
-    lang = langSelector.val();
+    lang = langSelector.value;
     let cues = textTrack.cues;
     let cue = cues[0];
     console.log(lang, cue)
