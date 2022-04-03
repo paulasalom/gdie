@@ -57,7 +57,7 @@ let map;
 var markers = [];
 let marker;
 
-let lang = "es";
+let lang = $('#language-picker-select').val();
 
 
 var videoElement = document.querySelector("video");
