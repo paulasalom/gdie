@@ -98,8 +98,22 @@ casablanca
 "lng": "-71.4082672458513", 
 }
 
+positano
+00:01:19.000 --> 00:01:29.000
+{
+"titulo": "Positano  - Italia",
+"descripcion": {
+    "es" : "Positano es una localidad situada junto a un acantilado en la costa Amalfitana del sur de Italia. Es un destino de vacaciones popular con una línea de playa de guijarros y calles empinadas, estrechas y repletas de boutiques y cafeterías. La Chiesa di Santa Maria Assunta, una iglesia con una cúpula cubierta de azulejos de mayólica, alberga un icono bizantino de la Virgen María que data del siglo XIII. La ruta de senderismo Sentiero degli Dei conecta Positano con otras ciudades de la costa.",
+    "en" : "Positano is a town located on a cliff on the Amalfi Coast of southern Italy. It is a popular holiday destination with a pebble beach line and steep, narrow streets full of boutiques and cafés. The Chiesa di Santa Maria Assunta, a church with a dome covered in majolica tiles, houses a Byzantine icon of the Virgin Mary dating from the 13th century. The Sentiero degli Dei hiking trail connects Positano with other coastal towns.",
+    "cat": "Posità és una localitat situada al costat d'un penya-segat a la costa Amalfitana del sud d'Itàlia. És un destí de vacances popular amb una línia de platja de còdols i carrers empinats, estrets i repletes de boutiques i cafeteries. La Chiesa di Santa Maria Assunta, una església amb una cúpula coberta de rajoles de majòlica, alberga una icona bizantí de la Mare de Déu Maria que data del segle XIII. La ruta de senderisme Sentiero degli Dei connecta Positano amb altres ciutats de la costa."
+},
+"img": ["https://images.squarespace-cdn.com/content/v1/5efce1f1f1c14550f51a35e4/1618774339010-8W2660HEFRTLW1IA76KP/Ama+de+Viaje+-+Costa+Amalfitana-3-2.jpg?format=750w","https://www.costa-amalfitana.com/wp-content/uploads/2018/04/positano_undia_11.jpg","https://www.sinmapa.net/wp-content/uploads/2018/08/salerno3-positano-1280x720.jpg"],
+"lat": "-14.07561758290546", 
+"lng": "-75.73439427259017"
+}
+
 ica
-00:01:19.000 --> 00:01:41.000
+00:01:29.000 --> 00:01:41.000
 {
 "titulo": "Ica  - Peru",
 "descripcion": {
