@@ -11751,3 +11751,18 @@ input[type="range"]::-webkit-slider-thumb {
 #editor{
   padding: 2%;
 }
+
+#language-picker-select {
+	margin-top: 35% !important;
+	background: transparent;
+	border: none;
+  color: white;
+  font-size: larger;
+  text-shadow: 0 0 5px #000;
+}
+
+@media (max-width: 943px) {
+  #language-picker-select {
+    margin-top: 0% !important;
+  }
+}
