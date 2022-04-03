@@ -53,8 +53,9 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
+// --- Funciones Mapa ---
+
 let map;
-var markers = [];
 let marker;
 
 let lang = 'es'
@@ -65,6 +66,9 @@ var videoElement = document.querySelector("video");
 var textTracks = videoElement.textTracks;
 videoElement.addTextTrack("metadata","User", "es");
 var textTrack = textTracks[0];
+var textTrackUser = textTracks[1];
+
+
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -87,9 +91,7 @@ textTrack.oncuechange = function () {
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
-        title: obj.titulo,
-        
-        
+        title: obj.titulo,  
     });
 }
 
@@ -100,38 +102,16 @@ langSelector.addEventListener('change', (e) =>{
 })
 
 
-// marker.addListener("click", function() {
-//     var title = marker.getTitle();
-//     console.log(title)
-//     if( title == "Lima - Peru"){
-//         videoElement.currentTime = textTrack.cues[0].startTime;
-//     }
-//     if(title == "Roatán - Honduras"){
-//         videoElement.currentTime = textTrack.cues[1].startTime;
-//     }
-//     if(title == "Viña del mar - Chile"){
-//         videoElement.currentTime = textTrack.cues[2].startTime;
-//     }
-//     if(title == "Tegucigalpa - Honduras"){
-//         videoElement.currentTime = textTrack.cues[3].startTime;
-//     }
-//     if(title == "Roatán - Honduras (2)"){
-//         videoElement.currentTime = textTrack.cues[4].startTime;
-//     }
-//     if(title == "Casablanca  - Chile"){
-//         videoElement.currentTime = textTrack.cues[5].startTime;
-//     }
-//     if(title == "Ica  - Peru"){
-//         videoElement.currentTime = textTrack.cues[6].startTime;
-//     }
-//     if(title == "Santa Ana  - Honduras"){
-//         videoElement.currentTime = textTrack.cues[7].startTime;
-//     }
-//     if(title == "Sorrento - Italia"){
-//         videoElement.currentTime = textTrack.cues[8].startTime;
-//     }
-    
-// }); 
+textTrackUser.oncuechange = function () {
+    var cue = this.activeCues[0];
+    var obj = JSON.parse(cue.text);
+    console.log(obj)
+    marker = new google.maps.Marker({
+        position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
+        map,
+        title: obj.titulo,  
+    });
+}
 
 
 //--- Funciones control video ---

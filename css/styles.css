@@ -339,10 +339,12 @@ label {
 
 button {
   border-radius: 0;
+  margin-bottom: 2rem;
 }
 
 button:focus:not(:focus-visible) {
   outline: 0;
+  
 }
 
 input,

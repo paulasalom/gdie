@@ -276,7 +276,6 @@
                     </form>
                     <script>
                       $("#addCueForm").submit(function (event) {
-                        debugger;
                         var videoElement = document.querySelector("video");
                         var textTracks = videoElement.textTracks;
                         var userTextTrack = textTracks[1];
@@ -359,7 +358,6 @@
                     </form>
                     <script>
                       $("#removeCueForm").submit(function (event) {
-                        debugger;
                         var videoElement = document.querySelector("video");
                         var removeCueId = this.elements["removeCueId"].value;
                         var textTracks = videoElement.textTracks;
