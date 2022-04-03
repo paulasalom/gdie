@@ -13,7 +13,7 @@ lima
 "lat": "-12.0431800", 
 "lng": "-77.0282400",
 "clock" : "<div style= 'text-align:center;padding:1em 0; '> <h4><a style= 'text-decoration:none; ' href= 'https://www.zeitverschiebung.net/es/city/3936456 '><span style= 'color:gray; '> </span><br />Lima, Perú</a></h4> <iframe src= 'https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FLima ' width= '100% ' height= '90 ' frameborder= '0 ' seamless></iframe> </div>",
-"weather" : "<div id='ww_433d76ecec55c' v='1.20' loc='id' a='{'t':'horizontal','lang':'en','ids':['wl6697'],'cl_bkg':'#000000','cl_font':'#FFFFFF','cl_cloud':'#FFFFFF','cl_persp':'#81D4FA','cl_sun':'#FFC107','cl_moon':'#FFC107','cl_thund':'#FF5722','sl_sot':'fahrenheit','sl_ics':'one_a','font':'Arial'}'>Weather for the Following Location: <a href='https://2ua.org/per/lima_region/map/' id='ww_433d76ecec55c_u' target='_blank'>Lima region, Peru</a></div><script async src='https://srv2.weatherwidget.org/js/?id=ww_433d76ecec55c'></script>"
+"weather" : "<div id='ww_104efc679fd41' v='1.20' loc='id' a='{'t':'responsive','lang':'en','ids':[],'cl_bkg':'#000000','cl_font':'#FFFFFF','cl_cloud':'#FFFFFF','cl_persp':'#81D4FA','cl_sun':'#FFC107','cl_moon':'#FFC107','cl_thund':'#FF5722','sl_tof':'7','sl_sot':'fahrenheit','sl_ics':'one_a','font':'Arial','cl_odd':'#FFFFFF17'}'>Weather Data Source: <a href='https://sharpweather.com/weather_los_angeles/' id='ww_104efc679fd41_u' target='_blank'>Los Angeles Weather</a></div><script async src='https://srv2.weatherwidget.org/js/?id=ww_104efc679fd41'></script>"
 }
 
 roatan
