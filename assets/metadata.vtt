@@ -13,7 +13,7 @@ lima
 "lat": "-12.0431800", 
 "lng": "-77.0282400",
 "clock" : "<div style= 'text-align:center;padding:1em 0; '> <h4><a style= 'text-decoration:none; ' href= 'https://www.zeitverschiebung.net/es/city/3936456 '><span style= 'color:gray; '> </span><br />Lima, Perú</a></h4> <iframe src= 'https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FLima ' width= '100% ' height= '90 ' frameborder= '0 ' seamless></iframe> </div>",
-"weather" : "<a class='weatherwidget-io' href='https://forecast7.com/en/n12d05n77d04/lima/' data-label_1='LIMA' data-label_2='WEATHER' data-theme='dark' >LIMA WEATHER</a>"
+"weather" : "<div style= 'text-align:center;padding:1em 0; '> <a class='weatherwidget-io' href='https://forecast7.com/en/n12d05n77d04/lima/' data-label_1='LIMA' data-label_2='WEATHER' data-theme='dark' >LIMA WEATHER</a></div>"
 }
 
 roatan
@@ -45,7 +45,7 @@ viña-del-mar
 "lat": "-33.02374662931928", 
 "lng": "-71.56659157607162",
 "clock" : "<div style= 'text-align:center;padding:1em 0; '> <h4><a style= 'text-decoration:none; ' href= 'https://www.zeitverschiebung.net/es/city/3868121 '><span style= 'color:gray; '> </span><br />Viña del Mar, Chile</a></h4> <iframe src= 'https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FSantiago ' width= '100% ' height= '90 ' frameborder= '0 ' seamless></iframe> </div>",
-"weather" : "<a class= 'weatherwidget-io ' href= 'https://forecast7.com/en/n33d02n71d55/vina-del-mar/ ' data-label_1= 'VIÑA DEL MAR ' data-label_2= 'WEATHER ' data-theme= 'dark ' >VIÑA DEL MAR WEATHER</a>"
+"weather" : "<div style= 'text-align:center;padding:1em 0; '> <a class='weatherwidget-io' href='https://forecast7.com/en/n12d05n77d04/lima/' data-label_1='LIMA' data-label_2='WEATHER' data-theme='dark' >LIMA WEATHER</a></div>"
 }
 
 tegucigalpa
