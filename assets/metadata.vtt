@@ -71,7 +71,7 @@ roatan2
 }
 
 napoles
-00:00:54.000 --> 00:01:05.000
+00:00:54.000 --> 00:01:06.000
 {
 "titulo": "Napoles - Italia",
 "descripcion": {
@@ -85,7 +85,7 @@ napoles
 }
 
 casablanca
-00:01:05.000 --> 00:01:19.000
+00:01:06.000 --> 00:01:19.000
 {
 "titulo": "Casablanca  - Chile",
 "descripcion": {
@@ -93,7 +93,7 @@ casablanca
     "en" : "Casablanca is a town and municipality in the Valparaíso Province of Chile.",
     "cat": "Casablanca és una comuna del litoral central de Xile pertanyent a la província i regió de Valparaíso, Xile."
 },
-"img": ["https://www.aondecasar.com.br/wp-content/uploads/2019/07/Valle-de-Casablanca-Chile-vinho-vin%C3%ADcola-LikeChile.jpg","https://static.xtrawine.com/Global/Images/XW/wine-zones/64_CasablancaValley_3.jpg","https://media-cdn.tripadvisor.com/media/photo-s/14/2f/3c/57/restaurant-vina-indomita.jpg"],
+"img": ["https://www.aondecasar.com.br/wp-content/uploads/2019/07/Valle-de-Casablanca-Chile-vinho-vin%C3%ADcola-LikeChile.jpg","https://content.r9cdn.net/rimg/dimg/7c/ad/365ab58a-city-47443-16635b51057.jpg?width=1200&height=630&crop=true","https://media-cdn.tripadvisor.com/media/photo-s/14/2f/3c/57/restaurant-vina-indomita.jpg"],
 "lat": "-33.30876529644405", 
 "lng": "-71.4082672458513", 
 }
