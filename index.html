@@ -141,16 +141,16 @@
                     <div class="form-group">
                       <label for="nameCue">Título del cue</label>
                       <input type="text" class="form-control" id="nameCue" aria-describedby="emailHelp"
-                        placeholder="Debe ser único">
+                        placeholder="Debe ser único" required>
                       <small id="emailHelp" class="form-text text-muted">Recuerda bien el nombre</small>
                     </div>
                     <div class="form-group">
                       <label for="startTime">Tiempo de inicio</label>
-                      <input type="text" class="form-control" id="startTime" placeholder="00.00s">
+                      <input type="text" class="form-control" id="startTime" placeholder="00.00s" required>
                     </div>
                     <div class="form-group">
                       <label for="endTime">Tiempo de fin</label>
-                      <input type="text" class="form-control" id="endTime" placeholder="00.00s">
+                      <input type="text" class="form-control" id="endTime" placeholder="00.00s" required>
                     </div>
                     <div class="form-group">
                       <label for="description">Descripcion</label>
@@ -158,11 +158,11 @@
                     </div>
                     <div class="form-group">
                       <label for="latCue">Latitud</label>
-                      <input type="text" class="form-control" id="latCue" placeholder="+-00.0000">
+                      <input type="text" class="form-control" id="latCue" placeholder="+-00.0000" required>
                     </div>
                     <div class="form-group">
                       <label for="lngCue">Longitud</label>
-                      <input type="text" class="form-control" id="lngCue" placeholder="+-00.0000">
+                      <input type="text" class="form-control" id="lngCue" placeholder="+-00.0000" required>
                     </div>
                     <div class="form-group">
                       <label for="src">Imagen</label>
@@ -193,8 +193,12 @@
                         "lng" : lng
                       }
 
-                      var newCue = new VTTCue(startTime, endTime, JSON.stringify(body) );
+                      var newCue = new VTTCue(startTime, endTime, JSON.stringify(body));
+                      newCue.id = title;
                       userTextTrack.addCue(newCue);
+                      event.preventDefault();
+                      this.reset();
+                      window.alert("Cue creada correctamente");
                     });
                   </script>
                 </div>
@@ -223,7 +227,29 @@
                   </form>
                   <script>
                     $("#removeCueForm").submit(function (event) {
-                      console.log('Eliminando Cue...')
+                      debugger
+                      var videoElement = document.querySelector("video");
+                      var removeCueId = this.elements['removeCueId'].value;
+                      var textTracks = videoElement.textTracks;
+                      var userTextTrack = textTracks[1];
+                      var userCuesList = userTextTrack.cues;
+                      var i =0;
+                      if(userCuesList.length>0){
+                        while(userCuesList[i].id !== removeCueId && i<userCuesList.length){
+                          i++
+                        }
+                        if(userCuesList.length === i){
+                          window.alert("NOMBRE INVÁLIDO")
+                        }
+                        else{
+                          userTextTrack.removeCue(userCuesList[i]);
+                          window.alert("CUE ELIMINADO");
+                        }
+                      }else{
+                        window.alert("NO SE HAN INTRODUCIDO CUES TODAVÍA");
+                      }
+                      event.preventDefault();
+                      this.reset();
                     });
                   </script>
                 </div>
