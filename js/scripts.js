@@ -76,6 +76,7 @@ function initMap() {
 textTrack.oncuechange = function () {
     var cue = this.activeCues[0];
     var obj = JSON.parse(cue.text);
+    console.log(obj)
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
@@ -83,39 +84,9 @@ textTrack.oncuechange = function () {
         
         
     });
-    markers.push(marker)
-    marker.addListener("click", function() {
-        // console.log(marker.getTitle())
-        console.log(marker.getCursor())
-        var title = marker.getTitle();
-        // console.log(title)
-    });
-
 }
 
-if (marker){
-    marker.addListener("click", function() {
-        // console.log(marker.getTitle())
-        console.log(markers[0].getTitle())
-        var title = marker.getTitle();
-        // console.log(title)
 
-
-    });
-}
-// marker.addListener("click", function() {
-//     // console.log(marker.getTitle())
-//     console.log(markers[0].getTitle())
-//     var title = marker.getTitle();
-//     // console.log(title)
-// });
-
-
-// const marker2 = markers.find(element => element.getTitle() = "Viña del mar - Chile")
-// marker2.addListener("click", function() {
-//     var title = marker2.getTitle();
-//     console.log(title)
-// })
 // marker.addListener("click", function() {
 //     var title = marker.getTitle();
 //     console.log(title)
