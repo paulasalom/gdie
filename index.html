@@ -244,6 +244,15 @@
                         />
                       </div>
                       <div class="form-group">
+                        <label for="img">Imágenes</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="img"
+                          placeholder="[Ruta de las imágenes]"
+                        />
+                      </div>
+                      <div class="form-group">
                         <label for="latCue">Latitud</label>
                         <input
                           type="text"
@@ -264,14 +273,26 @@
                         />
                       </div>
                       <div class="form-group">
-                        <label for="src">Imagen</label>
+                        <label for="clockInput">Widget de hora</label>
                         <input
                           type="text"
                           class="form-control"
-                          id="src"
-                          placeholder="Ruta de la imagen"
+                          id="clockInput"
+                          placeholder="Incrusta el widget"
+                          required
                         />
                       </div>
+                      <div class="form-group">
+                        <label for="weatherInput">Widget de tiempo</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="weatherInput"
+                          placeholder="Incrusta el widget"
+                          required
+                        />
+                      </div>
+
                       <button type="submit" class="btn btn-primary">
                         Enviar
                       </button>
@@ -290,16 +311,20 @@
                         );
                         var title = this.elements["nameCue"].value;
                         var description = this.elements["description"].value;
-                        var src = this.elements["src"].value;
+                        var img = this.elements["img"].value;
                         var lat = this.elements["latCue"].value;
                         var lng = this.elements["lngCue"].value;
+                        var clock = this.elements["clockInput"].value;
+                        var weather = this.elements["weatherInput"].value;
 
                         var body = {
                           titulo: title,
                           description: description,
-                          src: src,
+                          img: img,
                           lat: lat,
                           lng: lng,
+                          clock: clock,
+                          weather: weather
                         };
 
                         var newCue = new VTTCue(
