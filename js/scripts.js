@@ -105,6 +105,10 @@ textTrackUser.oncuechange = function () {
     var obj = JSON.parse(cue.text);
     console.log(obj)
     
+    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
+    document.getElementById('galeria').innerHTML = '<div class="col"><img src="'+ obj.img[0]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[1]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[2]+'" class="imagen"></div>'
+    document.getElementById('clock').innerHTML = obj.clock;
+    document.getElementById('weather').innerHTML = obj.weather;
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
