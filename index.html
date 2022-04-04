@@ -235,11 +235,29 @@
                         />
                       </div>
                       <div class="form-group">
-                        <label for="description">Descripcion</label>
+                        <label for="es">Descripcion en español</label>
                         <input
                           type="text"
                           class="form-control"
-                          id="description"
+                          id="es"
+                          placeholder="Escribe lo que quieras"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="en">Descripcion en inglés</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="en"
+                          placeholder="Escribe lo que quieras"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="cat">Descripcion en catalán</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cat"
                           placeholder="Escribe lo que quieras"
                         />
                       </div>
@@ -310,7 +328,9 @@
                           this.elements["endTime"].value
                         );
                         var title = this.elements["nameCue"].value;
-                        var description = this.elements["description"].value;
+                        var es = this.elements["es"].value;
+                        var en = this.elements["en"].value;
+                        var cat = this.elements["cat"].value;
                         var img = this.elements["img"].value;
                         var lat = this.elements["latCue"].value;
                         var lng = this.elements["lngCue"].value;
@@ -319,7 +339,11 @@
 
                         var body = {
                           titulo: title,
-                          description: description,
+                          description: {
+                            es: es,
+                            en: en,
+                            cat: cat
+                          },
                           img: img,
                           lat: lat,
                           lng: lng,
