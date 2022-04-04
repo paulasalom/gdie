@@ -81,13 +81,11 @@ textTrack.oncuechange = function () {
     var cue = this.activeCues[0];
     obj = JSON.parse(cue.text);
     console.log(obj)
-    console.log(obj.descripcion[lang]);
     
     document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
     document.getElementById('galeria').innerHTML = '<div class="col"><img src="'+ obj.img[0]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[1]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[2]+'" class="imagen"></div>'
     document.getElementById('clock').innerHTML = obj.clock;
-    document.getElementById('weather').setAttribute("href", "https://forecast7.com/en/40d8514d27/naples/");
-    
+    document.getElementById('weather').innerHTML = obj.weather;
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
@@ -104,7 +102,7 @@ textTrack.oncuechange = function () {
       js.src = "https://weatherwidget.io/js/widget.min.js";
       fjs.parentNode.insertBefore(js, fjs);
     }
-  })(document, "script", "weatherwidget-io-js");
+})(document, "script", "weatherwidget-io-js");
 
 const langSelector = document.getElementById('language-picker-select')
 langSelector.addEventListener('change', (e) =>{
