@@ -82,17 +82,29 @@ textTrack.oncuechange = function () {
     obj = JSON.parse(cue.text);
     console.log(obj)
     console.log(obj.descripcion[lang]);
-    //document.getElementById('description').innerHTML = '';
+    
     document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
     document.getElementById('galeria').innerHTML = '<div class="col"><img src="'+ obj.img[0]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[1]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[2]+'" class="imagen"></div>'
     document.getElementById('clock').innerHTML = obj.clock;
-    document.getElementById('weather').setAttribute("href", "https://forecast7.com/en/16d32n86d54/coxen-hole/ ");
+    document.getElementById('weather').setAttribute("href", "https://forecast7.com/en/40d8514d27/naples/");
+    
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
         title: obj.titulo,  
     });
 }
+
+!(function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://weatherwidget.io/js/widget.min.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, "script", "weatherwidget-io-js");
 
 const langSelector = document.getElementById('language-picker-select')
 langSelector.addEventListener('change', (e) =>{
