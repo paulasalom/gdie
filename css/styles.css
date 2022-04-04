@@ -11532,6 +11532,14 @@ body {
   #mainNav.navbar-shrink {
     background-color: #fff;
   }
+  #mainNav.navbar-shrink #language-picker-select {
+    margin-top: 20% !important;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 18pt;
+    text-shadow: 0 0 5px #000;
+  }
   #mainNav.navbar-shrink .navbar-brand {
     color: #000;
   }
@@ -11755,11 +11763,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #language-picker-select {
-	margin-top: 35% !important;
+	margin-top: 27% !important;
 	background: transparent;
 	border: none;
   color: white;
-  font-size: larger;
+  font-size: 18pt;
   text-shadow: 0 0 5px #000;
 }
 #weather img{
