@@ -93,17 +93,6 @@ textTrack.oncuechange = function () {
     });
 }
 
-!(function (d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (!d.getElementById(id)) {
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://weatherwidget.io/js/widget.min.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }
-})(document, "script", "weatherwidget-io-js");
-
 const langSelector = document.getElementById('language-picker-select')
 langSelector.addEventListener('change', (e) =>{
     lang = langSelector.value;
@@ -115,6 +104,7 @@ textTrackUser.oncuechange = function () {
     var cue = this.activeCues[0];
     var obj = JSON.parse(cue.text);
     console.log(obj)
+    
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,

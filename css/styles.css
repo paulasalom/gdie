@@ -11762,9 +11762,28 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: larger;
   text-shadow: 0 0 5px #000;
 }
+#weather img{
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+#weather {
+  text-align: end;
+}
+#clock {
+  padding-left: 5%;
+  text-align: start;
+}
 
 @media (max-width: 943px) {
   #language-picker-select {
     margin-top: 0% !important;
+  }
+  #weather {
+    text-align: center;
+  }
+  #clock {
+    padding-left: 0%;
+    text-align: center;
   }
 }
