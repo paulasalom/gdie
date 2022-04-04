@@ -74,10 +74,6 @@ function initMap() {
         center: { lat: 25.195336496218886, lng: -4.039732206325712},
         zoom: 2,
     }); 
-    map = new google.maps.Map(document.getElementById("mapMobile"), {
-        center: { lat: 25.195336496218886, lng: -4.039732206325712},
-        zoom: 2,
-    }); 
 }
 
 

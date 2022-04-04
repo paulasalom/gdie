@@ -11649,6 +11649,11 @@ body {
   margin-bottom: 5rem;
 }
 
+.map-section {
+  padding-top: 3%;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+
 
 .footer {
   padding: 5rem 0;
@@ -11662,12 +11667,12 @@ body {
 }
 
 video{
-  max-width: 100%;
+  max-width: 120%;
 }
 
 @media (max-width: 496px) {
   video{
-    max-width: 100%;
+    max-width: 120%;
     padding-top: 0%;
   }
 }
@@ -11679,7 +11684,7 @@ video{
 }
 
 .video {
-  width: 100%;
+  width: 120%;
 }
 
 .player-controls {
@@ -11799,16 +11804,14 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #principalMobile{
-  padding-top: 4%;
-  display: none;
+  height: 500px !important;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2%;
 }
-#Mobile{
-  display: none;
-}
-#Laptop{
-  padding-top: 4%;
-  display: block;
-}
+
+
 
 @media (max-width: 974px) {
   #language-picker-select {
@@ -11825,20 +11828,11 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     position: absolute;
     bottom: 0;
-    width: 93.8%;
+    width: 100%;
     transform: translateY(100%) translateY(-5px);
     transition: 0.3s;
     flex-wrap: wrap;
     background: rgba(0, 0, 0, 0.6);
-  }
-  #principalMobile{
-    display: block;
-  }
-  #Mobile{
-    display: block;
-  }
-  #Laptop{
-    display: none;
   }
 
   #principalMobile .col{
