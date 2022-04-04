@@ -88,6 +88,7 @@ textTrack.oncuechange = function () {
     document.getElementById('clock').innerHTML = obj.clock;
     document.getElementById('weather').innerHTML = obj.weather;
     $( "#weather" ).load(window.location.href + " #weather" )
+    document.getElementById('weather').innerHTML = obj.weather;
     marker = new google.maps.Marker({
         position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
         map,
