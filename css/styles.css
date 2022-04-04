@@ -11644,6 +11644,7 @@ body {
   padding-top: 8%;
   padding-left: 5%;
   padding-bottom: 3%;
+  max-height: max-content;
 }
 
 video{
@@ -11783,7 +11784,7 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: start !important;
 }
 
-@media (max-width: 943px) {
+@media (max-width: 974px) {
   #language-picker-select {
     margin-top: 0% !important;
   }
