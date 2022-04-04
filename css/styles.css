@@ -11772,7 +11772,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 #clock {
   padding-left: 5%;
-  text-align: start;
+  text-align: start !important;
 }
 
 @media (max-width: 943px) {
