@@ -78,6 +78,20 @@
   border-style: solid;
   border-color: whitesmoke;
   border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mapMobile {
+  height: 100%;
+  max-width: 85%;
+  max-height: 98%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
@@ -11576,7 +11590,7 @@ body {
   width: auto;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
+  padding: 3%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%, #000 100%), url("../assets/img/sand.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11784,6 +11798,18 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: start !important;
 }
 
+#principalMobile{
+  padding-top: 4%;
+  display: none;
+}
+#Mobile{
+  display: none;
+}
+#Laptop{
+  padding-top: 4%;
+  display: block;
+}
+
 @media (max-width: 974px) {
   #language-picker-select {
     margin-top: 0% !important;
@@ -11795,4 +11821,33 @@ input[type="range"]::-webkit-slider-thumb {
     padding-left: 0%;
     text-align: center;
   }
+  .player-controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 93.8%;
+    transform: translateY(100%) translateY(-5px);
+    transition: 0.3s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  #principalMobile{
+    display: block;
+  }
+  #Mobile{
+    display: block;
+  }
+  #Laptop{
+    display: none;
+  }
+
+  #principalMobile .col{
+    height: 300px !important;
+    width: 100%;
+  }
+
+  #firstRow {
+    padding-top: 19%;
+  }
 }
+
