@@ -11786,7 +11786,7 @@ input[type="range"]::-webkit-slider-thumb {
 	margin-top: 27% !important;
 	background: transparent;
 	border: none;
-  color: white;
+  color: black;
   font-size: 18pt;
   text-shadow: 0 0 5px #000;
 }
