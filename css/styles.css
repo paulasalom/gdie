@@ -11667,12 +11667,12 @@ body {
 }
 
 video{
-  max-width: 120%;
+  max-width: 100%;
 }
 
 @media (max-width: 496px) {
   video{
-    max-width: 120%;
+    max-width: 100%;
     padding-top: 0%;
   }
 }
@@ -11684,7 +11684,7 @@ video{
 }
 
 .video {
-  width: 120%;
+  width: 100%;
 }
 
 .player-controls {
