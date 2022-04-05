@@ -65,7 +65,7 @@
               <a class="nav-link" href="#mapSection">Mapa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#description">Descripción</a>
+              <a class="nav-link" href="#desc">Descripción</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#editor">Editor semántico</a>
@@ -81,56 +81,54 @@
         </div>
       </div>
     </nav>
-    <!-- Masthead-->
-    <section class="masthead">
-      <div class="row" id="firstRow">
-        <div class="row gx-4 gx-lg-5 justify-content-center" id="">
-          <div class="video-player">
-            <video class="video">
-              <source src="assets/video.mp4" type="video/mp4" />
-
-              <track default kind="metadata" src="assets/metadata.vtt" />
-            </video>
-
-            <div class="player-controls">
-              <div class="video-progress">
-                <div class="video-progress-filled"></div>
-              </div>
-
-              <button class="play-button" title="Play">►</button>
-
-              <button class="add-time-button" title="Add">+5</button>
-              <button class="rest-time-button" title="Rest">-5</button>
-              <button class="change-velocity" title="Vel">x2</button>
-
-              <input
-                type="range"
-                class="volume"
-                min="0"
-                max="1"
-                step="0.01"
-                value="1"
-              />
-
-              <div class="time">
-                <span class="current">0:00</span> /
-                <span class="duration">0:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="mapSection">
       <div class="map-section text-center">
-        <div class="row gx-4 gx-lg-5 justify-content-center" id="principalMobile">
-          <div class="col"  id="map"></div>
+        <div class="row" id="firstRow">
+          <div class="col-md-6 gx-4 gx-lg-5 justify-content-center" id="">
+            <div class="video-player">
+              <video class="video">
+                <source src="assets/video.mp4" type="video/mp4" />
+  
+                <track default kind="metadata" src="assets/metadata.vtt" />
+              </video>
+  
+              <div class="player-controls">
+                <div class="video-progress">
+                  <div class="video-progress-filled"></div>
+                </div>
+  
+                <button class="play-button" title="Play">►</button>
+  
+                <button class="add-time-button" title="Add">+5</button>
+                <button class="rest-time-button" title="Rest">-5</button>
+                <button class="change-velocity" title="Vel">x2</button>
+  
+                <input
+                  type="range"
+                  class="volume"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="1"
+                />
+  
+                <div class="time">
+                  <span class="current">0:00</span> /
+                  <span class="duration">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 gx-4 gx-lg-5 justify-content-center" id="principalMobile">
+            <div id="map"></div>
+          </div>
         </div>
+        
       </div>
     </section>
 
-    <section>
+    <section id="desc"> 
       <div class="description-section text-center">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-lg-8" id="description"></div>
