@@ -1,489 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Práctica GDIE</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Varela+Round"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Práctica GDIE</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container px-4 px-lg-5 te">
-        <a class="navbar-brand" href="#page-top">Práctica GDIE</a>
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#mapSection">Mapa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#desc">Descripción</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#editor">Editor semántico</a>
-            </li>
-            <li>
-              <select name="language-picker-select" id="language-picker-select">
-                <option lang="es" value="es" selected>Español</option>
-                <option lang="en" value="en">Inglés</option>
-                <option lang="cat" value="cat">Catalán</option>
-              </select>
-            </li>
-          </ul>
-        </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5 te">
+      <a class="navbar-brand" href="#page-top">Práctica GDIE</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#mapSection">Mapa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#desc">Descripción</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./formEditorSemantico.html">Editor semántico</a>
+          </li>
+          <li>
+            <select name="language-picker-select" id="language-picker-select">
+              <option lang="es" value="es" selected>Español</option>
+              <option lang="en" value="en">Inglés</option>
+              <option lang="cat" value="cat">Catalán</option>
+            </select>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section id="mapSection">
-      <div class="map-section text-center">
-        <div class="row" id="firstRow">
-          <div class="col-md-6 gx-4 gx-lg-5 justify-content-center" id="">
-            <div class="video-player">
-              <video class="video">
-                <source src="assets/video.mp4" type="video/mp4" />
-  
-                <track default kind="metadata" src="assets/metadata.vtt" />
-              </video>
-  
-              <div class="player-controls">
-                <div class="video-progress">
-                  <div class="video-progress-filled"></div>
+  <section id="mapSection">
+    <div class="map-section text-center">
+      <div class="row" id="firstRow">
+        <div class="col-md-6 gx-4 gx-lg-5 justify-content-center" id="">
+          <div class="row">
+            <div class="col-md-12 gx-12 gx-lg-12 justify-content-center">
+              <div class="video-player">
+                <video class="video">
+                  <source src="assets/video.mp4" type="video/mp4" />
+
+                  <track default kind="metadata" src="assets/metadata.vtt" />
+                </video>
+
+                <div class="player-controls">
+                  <div class="video-progress">
+                    <div class="video-progress-filled"></div>
+                  </div>
+
+                  <button class="play-button" title="Play">►</button>
+
+                  <button class="add-time-button" title="Add">+5</button>
+                  <button class="rest-time-button" title="Rest">-5</button>
+                  <button class="change-velocity" title="Vel">x2</button>
+
+                  <input type="range" class="volume" min="0" max="1" step="0.01" value="1" />
+
+                  <div class="time">
+                    <span class="current">0:00</span> /
+                    <span class="duration">0:00</span>
+                  </div>
                 </div>
-  
-                <button class="play-button" title="Play">►</button>
-  
-                <button class="add-time-button" title="Add">+5</button>
-                <button class="rest-time-button" title="Rest">-5</button>
-                <button class="change-velocity" title="Vel">x2</button>
-  
-                <input
-                  type="range"
-                  class="volume"
-                  min="0"
-                  max="1"
-                  step="0.01"
-                  value="1"
-                />
-  
-                <div class="time">
-                  <span class="current">0:00</span> /
-                  <span class="duration">0:00</span>
+              </div>
+            </div>
+            <div class="col-md-12 gx-12 gx-lg-12 justify-content-center" style="margin-top: 35px;">
+              <div class="row">
+                <div class="col-md-6 col-sx-6">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+                    Add
+                  </button>
+                </div>
+                <div class="col-md-6 col-sx-6">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#removeModal">
+                    Remove
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 gx-4 gx-lg-5 justify-content-center" id="principalMobile">
-            <div id="map"></div>
-          </div>
         </div>
-        
-      </div>
-    </section>
-
-    <section id="desc"> 
-      <div class="description-section text-center">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-lg-8" id="description"></div>
-        </div>
-        <div class="row gx-4 gx-lg-5 justify-content-center" id="">
-          <div class="col" id="weather"></div>
-          <div class="col" id="clock"></div>
+        <div class="col-md-6 gx-4 gx-lg-5 justify-content-center" id="principalMobile">
+          <div id="map"></div>
         </div>
       </div>
-    </section>
 
-    <section>
-      <div class="row" id="galeria"></div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="editor-section text-center" id="editor">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="text-white mb-4">Editor semántico</h2>
-            <p class="text-white-50">
-              El editor semántico proporciona la funcionalidad de añadir (Add) y
-              eliminar (Remove) metadata dentro del vídeo. Esto permite al
-              usuario crear un punto registrado en el vídeo, acotado entre dos
-              tiempos, en el que se pintará de manera dinámica la información
-              que el usuario haya proporcionado.
-            </p>
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#addModal"
-            >
-              Add
+  <section id="desc">
+    <div class="description-section text-center">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8" id="description"></div>
+      </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center" id="">
+        <div class="col" id="weather"></div>
+        <div class="col" id="clock"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="row" id="galeria"></div>
+  </section>
+
+  <!-- Add Modal -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addModalLabel">Añadir Cue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="addCueForm" class="container">
+            <div class="row">
+              <div class="form-group col-md-6 col-sx-12">
+                <label for="nameCue">Título del cue</label>
+                <input type="text" class="form-control" id="nameCue" aria-describedby="emailHelp"
+                  placeholder="Debe ser único" required />
+              </div>
+              <div class="form-group col-md-6 col-sx-12">
+                <label for="startTime">Tiempo de inicio</label>
+                <input type="text" class="form-control" id="startTime" placeholder="00.00s" required />
+              </div>
+              <div class="form-group col-md-6 col-sx-12">
+                <label for="endTime">Tiempo de fin</label>
+                <input type="text" class="form-control" id="endTime" placeholder="00.00s" required />
+              </div>
+
+              <div class="form-group col-md-6 col-sx-12" style="margin-top:35px">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseLocalizacion"
+                  aria-expanded="false" aria-controls="collapseLocalizacion">
+                  Localización
+                </button>
+              </div>
+            </div>
+
+            <div class="collapse" id="collapseLocalizacion">
+              <div class="card card-body">
+                <div class="row">
+                  <div class="form-group col-md-6 col-sx-12">
+                    <label for="latCue">Latitud</label>
+                    <input type="text" class="form-control" id="latCue" placeholder="+-00.0000" required />
+                  </div>
+                  <div class="form-group col-md-6 col-sx-12">
+                    <label for="lngCue">Longitud</label>
+                    <input type="text" class="form-control" id="lngCue" placeholder="+-00.0000" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sx-12">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDescriptions"
+                  aria-expanded="false" aria-controls="collapseDescriptions">
+                  Descripciones
+                </button>
+              </div>
+              <div class="col-md-6 col-sx-12">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseImages"
+                  aria-expanded="false" aria-controls="collapseImages">
+                  Imágenes
+                </button>
+              </div>
+            </div>
+
+            <div class="collapse" id="collapseDescriptions">
+              <div class="card card-body">
+                <div class="row">
+                  <div class="form-group col-md-4 col-sx-12">
+                    <label for="es">Español</label>
+                    <input type="text" class="form-control" id="es" placeholder="Desc 1" />
+                  </div>
+                  <div class="form-group col-md-4 col-sx-12">
+                    <label for="en">Inglés</label>
+                    <input type="text" class="form-control" id="en" placeholder="Desc 2" />
+                  </div>
+                  <div class="form-group col-md-4 col-sx-12">
+                    <label for="cat">Catalán</label>
+                    <input type="text" class="form-control" id="cat" placeholder="Desc 3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="collapse" id="collapseImages">
+              <div class="card card-body">
+                <div class="row">
+                  <div class="form-group col-md-4 col-sx-12">
+                    <label for="img1">Imagen</label>
+                    <input type="text" class="form-control" id="img1" placeholder="Ruta 1" />
+                  </div>
+                  <div class="form-group col-md-4 col-sx-12">
+                    <label for="img2">Imagen</label>
+                    <input type="text" class="form-control" id="img2" placeholder="Ruta 2" />
+                  </div>
+                  <div class="form-group col-md-4 col-sx-12">
+                    <label for="img3">Imagen</label>
+                    <input type="text" class="form-control" id="img3" placeholder="Ruta 3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sx-12">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseWidgets"
+                  aria-expanded="false" aria-controls="collapseWidgets" style="margin-top:20px">
+                  Widgets
+                </button>
+              </div>
+              <div class="col-md-6 col-sx-12">
+                <button type="submit" class="btn btn-primary" style="margin-top:20px ;">
+                  Enviar
+                </button>
+              </div>
+            </div>
+
+            <div class="collapse" id="collapseWidgets">
+              <div class="card card-body">
+                <div class="row">
+                  <div class="form-group col-md-6 col-sx-12">
+                    <label for="clockInput">Widget de hora</label>
+                    <input type="text" class="form-control" id="clockInput" placeholder="Incrusta el widget" />
+                  </div>
+                  <div class="form-group col-md-6 col-sx-12">
+                    <label for="weatherInput">Widget de tiempo</label>
+                    <input type="text" class="form-control" id="weatherInput" placeholder="Incrusta el widget" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </form>
+          <script>
+            $("#addCueForm").submit(function (event) {
+              var videoElement = document.querySelector("video");
+              var textTracks = videoElement.textTracks;
+              var userTextTrack = textTracks[1];
+
+              var startTime = parseFloat(
+                this.elements["startTime"].value
+              );
+              var endTime = parseFloat(
+                this.elements["endTime"].value
+              );
+              var title = this.elements["nameCue"].value;
+              var es = this.elements["es"].value;
+              var en = this.elements["en"].value;
+              var cat = this.elements["cat"].value;
+              var img1 = this.elements["img1"].value;
+              var img2 = this.elements["img2"].value;
+              var img3 = this.elements["img3"].value;
+              var lat = this.elements["latCue"].value;
+              var lng = this.elements["lngCue"].value;
+              var clock = this.elements["clockInput"].value;
+              var weather = this.elements["weatherInput"].value;
+
+              var body = {
+                titulo: title,
+                descripcion: {
+                  es: es,
+                  en: en,
+                  cat: cat
+                },
+                img: [img1, img2, img3],
+                lat: lat,
+                lng: lng,
+                clock: clock,
+                weather: weather
+              };
+
+              var newCue = new VTTCue(
+                startTime,
+                endTime,
+                JSON.stringify(body)
+              );
+              newCue.id = title;
+              userTextTrack.addCue(newCue);
+              event.preventDefault();
+              this.reset();
+              window.alert("Cue creada correctamente");
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Remove Modal -->
+  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="removeModalLabel">
+            Eliminar Cue
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="removeCueForm">
+            <div class="form-group">
+              <label for="removeCueId">Nombre del Cue</label>
+              <input type="text" class="form-control" id="removeCueId" placeholder="Escribe el nombre del Cue" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Enviar
             </button>
-
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#removeModal"
-            >
-              Remove
-            </button>
-
-            <!-- Add Modal -->
-            <div
-              class="modal fade"
-              id="addModal"
-              tabindex="-1"
-              role="dialog"
-              aria-labelledby="addModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Añadir Cue</h5>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form id="addCueForm">
-                      <div class="form-group">
-                        <label for="nameCue">Título del cue</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="nameCue"
-                          aria-describedby="emailHelp"
-                          placeholder="Debe ser único"
-                          required
-                        />
-                        <small id="emailHelp" class="form-text text-muted"
-                          >Recuerda bien el nombre</small
-                        >
-                      </div>
-                      <div class="form-group">
-                        <label for="startTime">Tiempo de inicio</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="startTime"
-                          placeholder="00.00s"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="endTime">Tiempo de fin</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="endTime"
-                          placeholder="00.00s"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="es">Descripcion en español</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="es"
-                          placeholder="Escribe lo que quieras"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="en">Descripcion en inglés</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="en"
-                          placeholder="Escribe lo que quieras"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="cat">Descripcion en catalán</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="cat"
-                          placeholder="Escribe lo que quieras"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="img1">Imagen</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="img1"
-                          placeholder="Ruta imagen 1"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="img2">Imagen</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="img2"
-                          placeholder="Ruta imagen 2"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="img3">Imagen</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="img3"
-                          placeholder="Ruta imagen 3"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="latCue">Latitud</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="latCue"
-                          placeholder="+-00.0000"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="lngCue">Longitud</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="lngCue"
-                          placeholder="+-00.0000"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="clockInput">Widget de hora</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="clockInput"
-                          placeholder="Incrusta el widget"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="weatherInput">Widget de tiempo</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="weatherInput"
-                          placeholder="Incrusta el widget"
-                          required
-                        />
-                      </div>
-
-                      <button type="submit" class="btn btn-primary">
-                        Enviar
-                      </button>
-                    </form>
-                    <script>
-                      $("#addCueForm").submit(function (event) {
-                        var videoElement = document.querySelector("video");
-                        var textTracks = videoElement.textTracks;
-                        var userTextTrack = textTracks[1];
-
-                        var startTime = parseFloat(
-                          this.elements["startTime"].value
-                        );
-                        var endTime = parseFloat(
-                          this.elements["endTime"].value
-                        );
-                        var title = this.elements["nameCue"].value;
-                        var es = this.elements["es"].value;
-                        var en = this.elements["en"].value;
-                        var cat = this.elements["cat"].value;
-                        var img1 = this.elements["img1"].value;
-                        var img2 = this.elements["img2"].value;
-                        var img3 = this.elements["img3"].value;
-                        var lat = this.elements["latCue"].value;
-                        var lng = this.elements["lngCue"].value;
-                        var clock = this.elements["clockInput"].value;
-                        var weather = this.elements["weatherInput"].value;
-
-                        var body = {
-                          titulo: title,
-                          descripcion: {
-                            es: es,
-                            en: en,
-                            cat: cat
-                          },
-                          img: [img1, img2, img3],
-                          lat: lat,
-                          lng: lng,
-                          clock: clock,
-                          weather: weather
-                        };
-
-                        var newCue = new VTTCue(
-                          startTime,
-                          endTime,
-                          JSON.stringify(body)
-                        );
-                        newCue.id = title;
-                        userTextTrack.addCue(newCue);
-                        event.preventDefault();
-                        this.reset();
-                        window.alert("Cue creada correctamente");
-                      });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Remove Modal -->
-            <div
-              class="modal fade"
-              id="removeModal"
-              tabindex="-1"
-              role="dialog"
-              aria-labelledby="removeModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="removeModalLabel">
-                      Eliminar Cue
-                    </h5>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form id="removeCueForm">
-                      <div class="form-group">
-                        <label for="removeCueId">Nombre del Cue</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="removeCueId"
-                          placeholder="Escribe el nombre del Cue"
-                        />
-                      </div>
-                      <button type="submit" class="btn btn-primary">
-                        Enviar
-                      </button>
-                    </form>
-                    <script>
-                      $("#removeCueForm").submit(function (event) {
-                        var videoElement = document.querySelector("video");
-                        var removeCueId = this.elements["removeCueId"].value;
-                        var textTracks = videoElement.textTracks;
-                        var userTextTrack = textTracks[1];
-                        var userCuesList = userTextTrack.cues;
-                        var i = 0;
-                        if (userCuesList.length > 0) {
-                          while (
-                            userCuesList[i].id !== removeCueId &&
-                            i < userCuesList.length
-                          ) {
-                            i++;
-                          }
-                          if (userCuesList.length === i) {
-                            window.alert("NOMBRE INVÁLIDO");
-                          } else {
-                            userTextTrack.removeCue(userCuesList[i]);
-                            window.alert("CUE ELIMINADO");
-                          }
-                        } else {
-                          window.alert("NO SE HAN INTRODUCIDO CUES TODAVÍA");
-                        }
-                        event.preventDefault();
-                        this.reset();
-                      });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </form>
+          <script>
+            $("#removeCueForm").submit(function (event) {
+              var videoElement = document.querySelector("video");
+              var removeCueId = this.elements["removeCueId"].value;
+              var textTracks = videoElement.textTracks;
+              var userTextTrack = textTracks[1];
+              var userCuesList = userTextTrack.cues;
+              var i = 0;
+              if (userCuesList.length > 0) {
+                while (
+                  userCuesList[i].id !== removeCueId &&
+                  i < userCuesList.length
+                ) {
+                  i++;
+                }
+                if (userCuesList.length === i) {
+                  window.alert("NOMBRE INVÁLIDO");
+                } else {
+                  userTextTrack.removeCue(userCuesList[i]);
+                  window.alert("CUE ELIMINADO");
+                }
+              } else {
+                window.alert("NO SE HAN INTRODUCIDO CUES TODAVÍA");
+              }
+              event.preventDefault();
+              this.reset();
+            });
+          </script>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4g6WK8SgiPykd_IwDhFQO87XgAq8mBtE&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD"
-      async
-      defer
-    ></script>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <!-- * *                               SB Forms JS                               * *-->
+  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4g6WK8SgiPykd_IwDhFQO87XgAq8mBtE&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD"
+    async defer></script>
 
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
