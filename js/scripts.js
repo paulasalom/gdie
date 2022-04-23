@@ -55,64 +55,102 @@ window.addEventListener('DOMContentLoaded', event => {
 
 // --- Funciones Mapa ---
 
-let map;
-let marker;
-
+var map;
 let lang = 'es'
-let obj;
 
 
 var videoElement = document.querySelector("video");
 var textTracks = videoElement.textTracks;
-videoElement.addTextTrack("metadata","User", "es");
+videoElement.addTextTrack("metadata", "User", "es");
 var textTrack = textTracks[0];
 var textTrackUser = textTracks[1];
+var cues = textTrack.cues;
+var cuesUser = textTrackUser.cues;
 
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 25.195336496218886, lng: -4.039732206325712},
+        center: { lat: 25.195336496218886, lng: -4.039732206325712 },
         zoom: 2,
-    }); 
+    });
 }
-
 
 textTrack.oncuechange = function () {
     var cue = this.activeCues[0];
     obj = JSON.parse(cue.text);
     console.log(obj)
-    
-    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
-    document.getElementById('galeria').innerHTML = '<div class="col"><img src="'+ obj.img[0]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[1]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[2]+'" class="imagen"></div>'
+
+    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo + '</h2> <p class="text-white-50" >' + obj.descripcion[lang] + '</p>';
+    document.getElementById('galeria').innerHTML = '<div class="col"><img src="' + obj.img[0] + '" class="imagen"></div><div class="col"><img src="' + obj.img[1] + '" class="imagen"></div><div class="col"><img src="' + obj.img[2] + '" class="imagen"></div>'
     document.getElementById('clock').innerHTML = obj.clock;
     document.getElementById('weather').innerHTML = obj.weather;
-    marker = new google.maps.Marker({
-        position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
-        map,
-        title: obj.titulo,  
+
+    var marker = new google.maps.Marker({
+        position: {lat: parseFloat(obj.lat), lng: parseFloat(obj.lng) },
+        map: map,
+        title: obj.titulo,
+    });
+    
+    var contentString =
+    '<div id="content'+obj.id+'">' +
+    '<div id="siteNotice'+obj.id+'">' +
+    "</div>" +
+    '<button class="buttonMap" id="'+obj.id+'"" type="submit" value="'+videoElement.textTracks[0].cues[obj.id].startTime+'" onclick="'+'videoElement.currentTime=$(this).val()'+'">Ir a '+ obj.titulo+ '</button>'
+    "</div>";
+    
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+    });
+
+    $("#content").hide();
+    marker.addListener("click", () => {
+        infowindow.open(map, marker);
+
     });
 }
 
-const langSelector = document.getElementById('language-picker-select')
-langSelector.addEventListener('change', (e) =>{
-    lang = langSelector.value;
-    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
-})
+
+
+
+// const langSelector = document.getElementById('language-picker-select')
+// langSelector.addEventListener('change', (e) =>{
+//     lang = langSelector.value;
+//     document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
+// })
 
 
 textTrackUser.oncuechange = function () {
     var cue = this.activeCues[0];
     var obj = JSON.parse(cue.text);
     console.log(obj)
-    
-    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
-    document.getElementById('galeria').innerHTML = '<div class="col"><img src="'+ obj.img[0]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[1]+'" class="imagen"></div><div class="col"><img src="'+ obj.img[2]+'" class="imagen"></div>'
+
+    document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo + '</h2> <p class="text-white-50" >' + obj.descripcion[lang] + '</p>';
+    document.getElementById('galeria').innerHTML = '<div class="col"><img src="' + obj.img[0] + '" class="imagen"></div><div class="col"><img src="' + obj.img[1] + '" class="imagen"></div><div class="col"><img src="' + obj.img[2] + '" class="imagen"></div>'
     document.getElementById('clock').innerHTML = obj.clock;
     document.getElementById('weather').innerHTML = obj.weather;
-    marker = new google.maps.Marker({
-        position: {lat: parseInt(obj.lat), lng: parseInt(obj.lng)},
-        map,
-        title: obj.titulo,  
+    
+    var marker = new google.maps.Marker({
+        position: {lat: parseFloat(obj.lat), lng: parseFloat(obj.lng) },
+        map: map,
+        title: obj.titulo,
+    });
+    
+    var contentString =
+    '<div id="content'+obj.id+'">' +
+    '<div id="siteNotice'+obj.id+'">' +
+    "</div>" +
+    '<button class="buttonMap" id="'+obj.id+'"" type="submit" value="'+videoElement.textTracks[1].cues[obj.id].startTime+'" onclick="'+'videoElement.currentTime=$(this).val()'+'">Ir a '+ obj.titulo+ '</button>'
+    "</div>";
+    
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+    });
+
+    $("#content").hide();
+    marker.addListener("click", () => {
+        infowindow.open(map, marker);
+
     });
 }
 
@@ -131,62 +169,62 @@ const progress = videoPlayer.querySelector('.video-progress')
 const progressBar = videoPlayer.querySelector('.video-progress-filled')
 
 //Change Velocity
-changeVelocity.addEventListener('click', (e)=>{
-    if(changeVelocity.textContent == 'x2'){
+changeVelocity.addEventListener('click', (e) => {
+    if (changeVelocity.textContent == 'x2') {
         changeVelocity.textContent = 'x1'
         video.playbackRate = 2.0
-    }else{
+    } else {
         changeVelocity.textContent = 'x2'
         video.playbackRate = 1.0
     }
 })
 //Add 5 seconds
-addTimeButton.addEventListener('click', (e) =>{
-    video.currentTime =video.currentTime + 5;
+addTimeButton.addEventListener('click', (e) => {
+    video.currentTime = video.currentTime + 5;
 })
 
 //Rest 5 seconds
-restTimeButton.addEventListener('click', (e) =>{
+restTimeButton.addEventListener('click', (e) => {
     video.currentTime = video.currentTime - 5
 })
 //Play and Pause button
 playButton.addEventListener('click', (e) => {
-  if(video.paused){
-    video.play()
-    e.target.textContent = '❚ ❚'
-  } else {
-    video.pause()
-    e.target.textContent = '►'
-  }
+    if (video.paused) {
+        video.play()
+        e.target.textContent = '❚ ❚'
+    } else {
+        video.pause()
+        e.target.textContent = '►'
+    }
 })
 
 //volume
-volume.addEventListener('mousemove', (e)=> {
-  video.volume = e.target.value
+volume.addEventListener('mousemove', (e) => {
+    video.volume = e.target.value
 })
 
 //current time and duration
 const currentTime = () => {
-  let currentMinutes = Math.floor(video.currentTime / 60)
-  let currentSeconds = Math.floor(video.currentTime - currentMinutes * 60)
-  let durationMinutes = Math.floor(video.duration / 60)
-  let durationSeconds = Math.floor(video.duration - durationMinutes * 60)
+    let currentMinutes = Math.floor(video.currentTime / 60)
+    let currentSeconds = Math.floor(video.currentTime - currentMinutes * 60)
+    let durationMinutes = Math.floor(video.duration / 60)
+    let durationSeconds = Math.floor(video.duration - durationMinutes * 60)
 
-  currentTimeElement.innerHTML = `${currentMinutes}:${currentSeconds < 10 ? '0'+currentSeconds : currentSeconds}`
-  durationTimeElement.innerHTML = `${durationMinutes}:${durationSeconds}`
+    currentTimeElement.innerHTML = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`
+    durationTimeElement.innerHTML = `${durationMinutes}:${durationSeconds}`
 }
 
 video.addEventListener('timeupdate', currentTime)
 
 
 //Progress bar
-video.addEventListener('timeupdate', () =>{
-  const percentage = (video.currentTime / video.duration) * 100
-  progressBar.style.width = `${percentage}%`
+video.addEventListener('timeupdate', () => {
+    const percentage = (video.currentTime / video.duration) * 100
+    progressBar.style.width = `${percentage}%`
 })
 
 //change progress bar on click
-progress.addEventListener('click', (e) =>{
-  const progressTime = (e.offsetX / progress.offsetWidth) * video.duration
-  video.currentTime = progressTime
+progress.addEventListener('click', (e) => {
+    const progressTime = (e.offsetX / progress.offsetWidth) * video.duration
+    video.currentTime = progressTime
 })

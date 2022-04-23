@@ -269,6 +269,7 @@
 
           </form>
           <script>
+            var i = 0;
             $("#addCueForm").submit(function (event) {
               var videoElement = document.querySelector("video");
               var textTracks = videoElement.textTracks;
@@ -280,6 +281,7 @@
               var endTime = parseFloat(
                 this.elements["endTime"].value
               );
+              var id = i;
               var title = this.elements["nameCue"].value;
               var es = this.elements["es"].value;
               var en = this.elements["en"].value;
@@ -293,6 +295,7 @@
               var weather = this.elements["weatherInput"].value;
 
               var body = {
+                id: id,
                 titulo: title,
                 descripcion: {
                   es: es,
@@ -311,7 +314,9 @@
                 endTime,
                 JSON.stringify(body)
               );
-              newCue.id = title;
+              console.log(startTime)
+              newCue.id = i;
+              i++;
               userTextTrack.addCue(newCue);
               event.preventDefault();
               this.reset();

@@ -3,6 +3,7 @@ WEBVTT
 lima
 00:00:00.000 --> 00:00:08.000
 {
+"id": "0",
 "titulo": "Lima - Peru",
 "descripcion": {
     "es" : "Lima es la capital de Perú ubicada en la árida costa del Pacífico del país. Pese a que su centro colonial se conserva, es una desbordante metrópolis y una de las ciudades más grandes de Sudamérica. El Museo Larco alberga una colección de arte precolombino y el Museo de la Nación recorre la historia de las civilizaciones antiguas de Perú. La Plaza de Armas y la catedral del siglo XVI son el núcleo del antiguo centro de Lima.",
@@ -19,6 +20,7 @@ lima
 roatan
 00:00:08.000 --> 00:00:19.000
 {
+"id": "1",   
 "titulo": "Roatán - Honduras",
 "descripcion": {
     "es" : "Roatán es una isla hondureña situada en las Islas de la Bahía, en el Caribe. Forma parte del enorme Sistema Arrecifal Mesoamericano y es conocida por sus playas, sus sitios de buceo y su vida marina, que incluye tiburones ballena. Al sudoeste se halla la concurrida playa de Bahía Oeste, que tiene un arrecife de coral cerca de la orilla. Los cruceros atracan en la capital (Roatán) y en la cercana bahía Mahogany. Al este hay pequeños asentamientos como el de la cultura garífuna en el pueblo de Punta Gorda.",
@@ -35,6 +37,7 @@ roatan
 viña-del-mar
 00:00:19.000 --> 00:00:30.000
 {
+"id": "2",
 "titulo": "Viña del mar - Chile",
 "descripcion": {
     "es" : "Viña del Mar es un ciudad turística costera que se encuentra al noroeste de Santiago de Chile. Es conocida por sus jardines, playas y edificios de gran altura. En el parque Quinta Vergara se encuentra el anfiteatro de la Quinta Vergara, el palacio Vergara, de principios del siglo XX, y el Museo Artequin, que exhibe copias de obras de arte prestigiosas. El Museo de Arqueología e Historia Francisco Fonck exhibe esculturas moáis de la isla de Pascua y cabezas reducidas.",
@@ -51,6 +54,7 @@ viña-del-mar
 tegucigalpa
 00:00:30.000 --> 00:00:43.000
 {
+"id": "3",
 "titulo": "Tegucigalpa - Honduras",
 "descripcion": {
     "es" : "Tegucigalpa es la capital de Honduras y está situada en un valle rodeado de montañas. Se la conoce por su arquitectura colonial española, cuyo estado de conservación es muy bueno. La catedral de San Miguel Arcángel, con su interior barroco, es el edificio más importante de la plaza Central o Morazán. El Museo para la Identidad Nacional hace un recorrido por la historia del país e incluye una visita virtual por las ruinas mayas de Copán, al oeste de Honduras.",
@@ -67,6 +71,7 @@ tegucigalpa
 roatan2
 00:00:43.000 --> 00:00:54.000
 {
+"id": "4",
 "titulo": "Roatán - Honduras (2)",
 "descripcion": {
     "es" : "Roatán es una isla hondureña situada en las Islas de la Bahía, en el Caribe. Forma parte del enorme Sistema Arrecifal Mesoamericano y es conocida por sus playas, sus sitios de buceo y su vida marina, que incluye tiburones ballena. Al sudoeste se halla la concurrida playa de Bahía Oeste, que tiene un arrecife de coral cerca de la orilla. Los cruceros atracan en la capital (Roatán) y en la cercana bahía Mahogany. Al este hay pequeños asentamientos como el de la cultura garífuna en el pueblo de Punta Gorda.",
@@ -83,6 +88,7 @@ roatan2
 napoles
 00:00:54.000 --> 00:01:06.000
 {
+"id": "5",
 "titulo": "Napoles - Italia",
 "descripcion": {
     "es" : "Nápoles es una ciudad del sur de Italia que se ubica en el golfo de Nápoles. Cerca se encuentra el monte Vesubio, el volcán aún activo que destruyó la cercana ciudad romana de Pompeya. Nápoles data del segundo milenio a. C. y tiene siglos de arte y arquitectura importantes. La catedral de la ciudad, Duomo di San Gennaro, está llena de frescos. Otros hitos importantes incluyen el espléndido Palacio Real y el castillo Castel Nuovo del siglo XIII. ",
@@ -99,6 +105,7 @@ napoles
 casablanca
 00:01:06.000 --> 00:01:19.000
 {
+"id": "6",
 "titulo": "Casablanca  - Chile",
 "descripcion": {
     "es" : "Casablanca es una comuna del litoral central de Chile perteneciente a la provincia y región de Valparaíso, Chile.",
@@ -115,6 +122,7 @@ casablanca
 positano
 00:01:19.000 --> 00:01:29.000
 {
+"id": "7",
 "titulo": "Positano  - Italia",
 "descripcion": {
     "es" : "Positano es una localidad situada junto a un acantilado en la costa Amalfitana del sur de Italia. Es un destino de vacaciones popular con una línea de playa de guijarros y calles empinadas, estrechas y repletas de boutiques y cafeterías. La Chiesa di Santa Maria Assunta, una iglesia con una cúpula cubierta de azulejos de mayólica, alberga un icono bizantino de la Virgen María que data del siglo XIII. La ruta de senderismo Sentiero degli Dei conecta Positano con otras ciudades de la costa.",
@@ -131,6 +139,7 @@ positano
 ica
 00:01:29.000 --> 00:01:41.000
 {
+"id": "8",
 "titulo": "Ica  - Peru",
 "descripcion": {
     "es" : "Ica es una ciudad del centro sur del Perú, capital del departamento de Ica, situada en el estrecho valle que forma el río Ica, entre el Gran Tablazo de Ica y las laderas occidentales de la cordillera de los Andes. La ciudad de Ica incluye cinco distritos urbanos.",
@@ -147,6 +156,7 @@ ica
 santa-ana
 00:01:41.000 --> 00:01:58.000
 {
+"id": "9",
 "titulo": "Santa Ana  - Honduras",
 "descripcion": {
     "es" : "Santa Ana es un municipio del departamento de Francisco Morazán en la República de Honduras.",
@@ -163,6 +173,7 @@ santa-ana
 sorrento
 00:01:58.000 --> 00:02:08.000
 {
+"id": "10",
 "titulo": "Sorrento - Italia",
 "descripcion": {
     "es" : "Sorrento es una ciudad costera en el suroeste de Italia, frente al golfo de Nápoles en la península Sorrentina. Situada sobre acantilados que separan la ciudad de sus ocupados puertos deportivos, es famosa por las vistas panorámicas del mar y la Piazza Tasso, una plaza rodeada de cafés. El centro histórico es un laberinto de pasajes angostos donde se encuentra la Chiesa di San Francesco, una iglesia del siglo XIV con un sereno claustro.",
