@@ -112,11 +112,11 @@ textTrack.oncuechange = function () {
 
 
 
-// const langSelector = document.getElementById('language-picker-select')
-// langSelector.addEventListener('change', (e) =>{
-//     lang = langSelector.value;
-//     document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
-// })
+ const langSelector = document.getElementById('language-picker-select')
+ langSelector.addEventListener('change', (e) =>{
+     lang = langSelector.value;
+     document.getElementById('description').innerHTML = '<h2 class="text-white mb-4">' + obj.titulo +'</h2> <p class="text-white-50" >'+  obj.descripcion[lang] +'</p>';
+ })
 
 
 textTrackUser.oncuechange = function () {
