@@ -73,9 +73,25 @@
 
                     <button class="play-button" title="Play">►</button>
 
-                    <button class="add-time-button" title="Add">+5</button>
-                    <button class="rest-time-button" title="Rest">-5</button>
-                    <button class="change-velocity" title="Vel">x2</button>
+                    <button class="add-time-button player-button" title="Add">+5</button>
+                    <button class="rest-time-button player-button" title="Rest">-5</button>
+                    <button class="change-velocity player-button" title="Vel">x2</button>
+                    <button
+                      type="button"
+                      class="player-button"
+                      data-toggle="modal"
+                      data-target="#addModal"
+                    >
+                      Add Metadata
+                    </button>
+                    <button
+                      type="button"
+                      class="player-button"
+                      data-toggle="modal"
+                      data-target="#removeModal"
+                    >
+                      Remove Metadata
+                    </button>
 
                     <input
                       type="range"
@@ -94,24 +110,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-1 justify-content-start">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-toggle="modal"
-                data-target="#addModal"
-              >
-                Add
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-toggle="modal"
-                data-target="#removeModal"
-              >
-                Remove
-              </button>
-            </div>
+            <div class="col-sm-1 justify-content-start"></div>
           </div>
 
           <div
