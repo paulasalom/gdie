@@ -67,6 +67,8 @@ var textTrackUser = textTracks[1];
 var cues = textTrack.cues;
 var cuesUser = textTrackUser.cues;
 
+console.log(textTrack)
+
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {

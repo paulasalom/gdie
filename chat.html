@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+  
+    <title>Chat</title>
+</head>
+<body>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Inicio</a>  
+          </div>
+        </nav>
+    <div class="titulo">  </div>
+    <div id="chat-container">
+        <div id="chat-window">
+            <div id="output"></div>
+            <div id="actions"></div>
+        </div>
+        <input type="text" id="user" placeholder="User">
+        <input type="text" id="message" placeholder="Message">
+        <button class="btnchat" id="send">Send</button>
+
+    </div> 
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
