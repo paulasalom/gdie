@@ -561,7 +561,6 @@
             let html = "";
             let id = 0;
             data.levels.forEach((element) => {
-              console.log(element);
               html += `<option value="${id}">${element.attrs.RESOLUTION}</option>`;
               i++;
             });
@@ -573,13 +572,12 @@
           "https://alumnes-ltim.uib.es/gdie2205/dash_streaming/video-dash.mpd";
         var player = dashjs.MediaPlayer().create();
         player.initialize(document.querySelector("#video"), url, true);
-        console.log(player.isReady())
       }
       document.getElementById("quality").addEventListener("change", () => {
-        console.log(document.getElementById("quality").value);
+        //console.log(document.getElementById("quality").value);
         
-        hls.loadLevel = document.getElementById("quality").value;;
-        console.log(hls.currentLevel);
+        //hls.loadLevel = document.getElementById("quality").value;;
+        //console.log(hls.currentLevel);
       });
       
     </script>

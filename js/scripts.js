@@ -64,7 +64,7 @@ var textTrackUser = textTracks[1];
 var cues = textTrack.cues;
 var cuesUser = textTrackUser.cues;
 
-//console.log(textTrack);
+console.log(textTrack);
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -76,7 +76,7 @@ function initMap() {
 textTrack.oncuechange = function () {
   var cue = this.activeCues[0];
   obj = JSON.parse(cue.text);
-  //console.log(obj);
+  console.log(obj);
 
   document.getElementById("description").innerHTML =
     '<h2 class="text-white mb-4">' +
@@ -144,7 +144,7 @@ langSelector.addEventListener("change", (e) => {
 textTrackUser.oncuechange = function () {
   var cue = this.activeCues[0];
   var obj = JSON.parse(cue.text);
-  //console.log(obj);
+  console.log(obj);
 
   document.getElementById("description").innerHTML =
     '<h2 class="text-white mb-4">' +
